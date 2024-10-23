@@ -23,9 +23,13 @@ def get_photo_apod(folder, api_key, num=5):
     for apod_image in response.json():
         if apod_image.get('media_type') == 'image':
             apod_url = apod_image.get("hdurl") or apod_image.get("url")
+        else:
+            print("Изображение не найдено")
         name, extension = get_extension(apod_url)
         path = os.path.join(folder,f"{name}{extension}")
         download_image(apod_url, path)
+
+
 
 
 if __name__ == '__main__':
