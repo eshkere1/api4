@@ -4,7 +4,7 @@ import os
 
 
 
-def download_image(url, path, params):
+def download_image(url, path, params=None):
     directory = os.path.dirname(path)
     os.makedirs(directory, exist_ok=True)
     response = requests.get(url, params)
