@@ -10,7 +10,7 @@ from time import sleep
 def main():
     load_dotenv()
     tg_key = os.environ["TELEGRAM_KEY"]
-    chat_id = os.environ["TELEGRAM_KEY"]
+    chat_id = os.environ["CHAT_ID"]
     bot = telegram.Bot(token=tg_key)
     while True:
         images = os.listdir("images")
