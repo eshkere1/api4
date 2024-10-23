@@ -18,7 +18,7 @@ def main():
         for image in images:
             with open(f'images/{image}', 'rb') as f:
                 bot.send_photo(chat_id=chat_id, photo=f)
-            sleep(5)
+            sleep(14400)
 
 
 
